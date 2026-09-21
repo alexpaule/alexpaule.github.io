@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>暖暖环游世界异次元-攻略图鉴与装备搭配指南</title>
+    <meta name="description" content="暖暖环游世界异次元专题站，提供游戏最新资讯、异次元关卡全攻略、SSR级服装搭配推荐及角色图鉴查询，助你轻松通关异次元副本。">
+    <meta name="keywords" content="暖暖环游世界异次元,暖暖异次元攻略,暖暖环游世界图鉴,暖暖环游世界搭配,暖暖SSR服装">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b9d;
+            --secondary-color: #7b4397;
+            --accent-color: #ff9a9e;
+            --bg-color: #fff0f5;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-light: #666666;
+            --border-radius: 12px;
+            --shadow: 0 4px 15px rgba(255, 107, 157, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://picsum.photos/seed/ranran/1600/600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-bottom: 2rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(123, 67, 151, 0.3), rgba(255, 107, 157, 0.7));
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 25px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 3rem;
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-weight: normal;
+        }
+
+        /* Card Grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-img {
+            height: 150px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            margin-bottom: 8px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+            color: var(--text-light);
+        }
+
+        .tag-ssr { background-color: #fff0f5; color: var(--primary-color); }
+        .tag-hard { background-color: #ffebee; color: #e53935; }
+        .tag-recommend { background-color: #e3f2fd; color: #1e88e5; }
+
+        /* Guide List */
+        .guide-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .guide-item {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+
+        .guide-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .guide-info h3 {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+
+        .guide-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .guide-meta {
+            font-size: 0.75rem;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .rank-list {
+            counter-reset: rank;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .rank-item::before {
+            counter-increment: rank;
+            content: counter(rank);
+            width: 24px;
+            height: 24px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-item:nth-child(1)::before { background: #ffd700; }
+        .rank-item:nth-child(2)::before { background: #c0c0c0; }
+        .rank-item:nth-child(3)::before { background: #cd7f32; }
+
+        .rank-name {
+            flex: 1;
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+            padding-left: 10px;
+            border-left: 3px solid var(--accent-color);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #999;
+            padding: 40px 0 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <span>异次元</span> 暖暖环游世界
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">攻略</a></li>
+                    <li><a href="#">图鉴</a></li>
+                    <li><a href="#">搭配</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>异次元副本全通关指南</h1>
+                <p>探索神秘时空，收集限定SSR套装，掌握最优搭配策略，助你轻松获得S评价。</p>
+                <a href="#guides" class="btn">查看最新攻略</a>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <!-- Left Column: Content -->
+            <div class="content-column">
+                
+                <!-- Latest Guides -->
+                <section id="guides">
+                    <div class="section-title">
+                        <h2>最新异次元攻略</h2>
+                        <a href="#">查看更多 &raquo;</a>
+                    </div>
+                    <div class="guide-list">
+                        <article class="guide-item">
+                            <img src="https://picsum.photos/seed/ranran1/100/100" alt="异次元搭配" class="guide-thumb">
+                            <div class="guide-info">
+                                <h3>异次元·极光森林 S评价搭配推荐</h3>
+                                <p>针对高难度异次元关卡，提供属性加成最优的服装组合，包含发型、上衣、下装及配饰的详细选择。</p>
+                                <div class="guide-meta">分类：异次元攻略 | 浏览：12.5k</div>
+                            </div>
+                        </article>
+                        <article class="guide-item">
+                            <img src="https://picsum.photos/seed/ranran2/100/100" alt="SSR获取" class="guide-thumb">
+                            <div class="guide-info">
+                                <h3>异次元限定SSR服装获取途径汇总</h3>
+                                <p>盘点异次元活动中所有可获得的SSR级稀有服装，分析掉落概率与刷取技巧。</p>
+                                <div class="guide-meta">分类：图鉴资料 | 浏览：8.3k</div>
+                            </div>
+                        </article>
+                        <article class="guide-item">
+                            <img src="https://picsum.photos/seed/ranran3/100/100" alt="通关技巧" class="guide-thumb">
+                            <div class="guide-info">
+                                <h3>异次元·星夜回廊 S评价通关技巧</h3>
+                                <p>针对星夜回廊关卡的特殊机制，解析如何利用体力管理策略，以最低成本达成完美通关。</p>
+                                <div class="guide-meta">分类：游戏技巧 | 浏览：6.1k</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Fashion Grid -->
+                <section style="margin-top: 40px;">
+                    <div class="section-title">
+                        <h2>热门异次元搭配</h2>
+                        <a href="#">浏览更多 &raquo;</a>
+                    </div>
+                    <div class="card-grid">
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dress1/300/200" alt="冰雪奇缘套装" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">冰雪奇缘·初遇</h3>
+                                <span class="card-tag tag-ssr">SSR</span>
+                                <span class="card-tag tag-recommend">推荐</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dress2/300/200" alt="赛博朋克套装" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">赛博朋克·霓虹</h3>
+                                <span class="card-tag tag-ssr">SSR</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dress3/300/200" alt="魔法学院套装" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">魔法学院·礼服</h3>
+                                <span class="card-tag tag-hard">困难</span>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="https://picsum.photos/seed/dress4/300/200" alt="春日和套装" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">春日和·和服</h3>
+                                <span class="card-tag tag-recommend">舒适</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- FAQ Section -->
+                <section class="faq-section" style="margin-top: 40px;">
+                    <div class="section-title">
+                        <h2>常见问题解答</h2>
+                    </div>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question">异次元副本每周可以挑战几次？</div>
+                            <div class="faq-answer">异次元副本通常每周重置一次，玩家可以根据体力情况选择挑战。建议优先挑战评分较低的关卡，逐步提升。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">SSR服装属性是否比SR服装高很多？</div>
+                            <div class="faq-answer">SSR服装在基础属性和特殊属性上通常优于SR，但在特定搭配中，合理的SR组合也能达到S评价。</div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question">如何快速获得异次元点数？</div>
+                            <div class="faq-answer">完成每日任务、参与异次元限时活动以及通关异次元关卡是获取点数的主要途径。</div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- Rank List -->
+                <div class="sidebar-card">
+                    <div class="section-title">
+                        <h2>异次元热度排行</h2>
+                    </div>
+                    <div class="rank-list">
+                        <div class="rank-item">
+                            <span class="rank-name">异次元·幻境之森</span>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-name">异次元·机械之心</span>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-name">异次元·深海回响</span>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-name">异次元·天空之城</span>
+                        </div>
+                        <div class="rank-item">
+                            <span class="rank-name">异次元·远古遗迹</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tips Card -->
+                <div class="sidebar-card" style="background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);">
+                    <div class="section-title">
+                        <h2>搭配小贴士</h2>
+                    </div>
+                    <p style="font-size: 0.9rem; color: #555; margin-bottom: 10px;">
+                        在异次元关卡中，属性克制是关键。注意观察关卡所需的属性类型，优先选择带有对应加成的服装。
+                    </p>
+                    <img src="https://picsum.photos/seed/tips/400/200" alt="搭配示意图" style="width: 100%; border-radius: 8px; margin-top: 10px;">
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">联系方式</a>
+                <a href="#">网站地图</a>
+            </div>
+            <p>&copy; 2023 暖暖环游世界异次元攻略站. All Rights Reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; color: #666;">
+                本站为非官方网站，仅提供攻略与资讯分享。游戏版权归原开发团队所有。
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
