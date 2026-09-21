@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="爽妇网se - 专注提供成人向情感交流与社区互动平台，包含精选内容、用户分享及互动指南。">
+    <meta name="keywords" content="爽妇网se, 成人社区, 情感互动, 在线交流">
+    <title>爽妇网se - 成人情感交流与社区互动平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --accent-color: #bb86fc;
+            --accent-hover: #9965f4;
+            --border-color: #333;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .grid {
+            display: grid;
+            gap: var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .header-inner {
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--accent-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-primary);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .user-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: #000;
+            font-weight: 500;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-secondary);
+            color: var(--text-primary);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 40px 0;
+            text-align: center;
+            background: linear-gradient(180deg, #1a1a1a 0%, var(--bg-color) 100%);
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 24px;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            color: var(--text-primary);
+            outline: none;
+        }
+
+        .search-bar input:focus {
+            border-color: var(--accent-color);
+        }
+
+        /* Categories Grid */
+        .section-title {
+            font-size: 20px;
+            margin-bottom: 16px;
+            padding-left: 8px;
+            border-left: 3px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .categories-grid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            margin-bottom: 40px;
+        }
+
+        .cat-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.2s, background-color 0.2s;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-color);
+            background-color: #252525;
+        }
+
+        .cat-icon {
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .cat-name {
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        /* Featured Content */
+        .content-grid {
+            grid-template-columns: 2fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .card-header {
+            padding: 16px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .post-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .post-item:last-child {
+            border-bottom: none;
+        }
+
+        .post-thumb {
+            width: 80px;
+            height: 60px;
+            background-color: #333;
+            border-radius: 4px;
+            flex-shrink: 0;
+            object-fit: cover;
+        }
+
+        .post-info {
+            flex: 1;
+        }
+
+        .post-title {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: var(--text-primary);
+        }
+
+        .post-meta {
+            font-size: 12px;
+            color: var(--text-secondary);
+            display: flex;
+            gap: 12px;
+        }
+
+        /* Sidebar Widgets */
+        .sidebar-widget {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 16px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 24px;
+        }
+
+        .hot-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+        }
+
+        .hot-list li:last-child {
+            border-bottom: none;
+        }
+
+        .hot-num {
+            color: var(--accent-color);
+            font-weight: bold;
+            margin-right: 8px;
+            font-style: italic;
+        }
+
+        .hot-title {
+            font-size: 14px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            margin-top: 40px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 10px 0;
+            }
+            
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            nav ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 12px;
+            }
+
+            .user-actions {
+                display: none;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .categories-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                <path d="M12 12L2.1 12.1"></path>
+                <path d="M12 12l7.9-7.9"></path>
+            </svg>
+            <span>爽妇网se</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">社区动态</a></li>
+                <li><a href="#">热门话题</a></li>
+                <li><a href="#">用户指南</a></li>
+            </ul>
+        </nav>
+        <div class="user-actions">
+            <button class="btn btn-outline">登录</button>
+            <button class="btn btn-primary">注册</button>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="hero">
+        <h1>探索更多情感与互动空间</h1>
+        <p>加入爽妇网se，与志同道合的伙伴分享交流，探索多元社区文化。</p>
+        <div class="search-bar">
+            <input type="text" placeholder="搜索感兴趣的内容...">
+        </div>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <span>热门分类</span>
+        </div>
+        <div class="grid categories-grid">
+            <div class="cat-card">
+                <span class="cat-icon">💬</span>
+                <span class="cat-name">情感交流</span>
+            </div>
+            <div class="cat-card">
+                <span class="cat-icon">🎥</span>
+                <span class="cat-name">视频分享</span>
+            </div>
+            <div class="cat-card">
+                <span class="cat-icon">🖼️</span>
+                <span class="cat-name">图文社区</span>
+            </div>
+            <div class="cat-card">
+                <span class="cat-icon">🎧</span>
+                <span class="cat-name">音频电台</span>
+            </div>
+            <div class="cat-card">
+                <span class="cat-icon">🎮</span>
+                <span class="cat-name">互动游戏</span>
+            </div>
+            <div class="cat-card">
+                <span class="cat-icon">📚</span>
+                <span class="cat-name">阅读专区</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="content-grid">
+        <!-- Main Content -->
+        <article class="card">
+            <div class="card-header">
+                <span class="card-title">最新动态</span>
+                <a href="#" style="font-size: 12px; color: var(--text-secondary);">更多 &gt;</a>
+            </div>
+            <div class="card-body">
+                <div class="post-item">
+                    <img src="https://picsum.photos/seed/rel1/160/120" alt="Post Image" class="post-thumb">
+                    <div class="post-info">
+                        <a href="#" class="post-title">探讨现代社交中的情感表达方式</a>
+                        <div class="post-meta">
+                            <span>作者: Admin</span>
+                            <span>2023-10-24</span>
+                            <span>💬 128</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item">
+                    <img src="https://picsum.photos/seed/rel2/160/120" alt="Post Image" class="post-thumb">
+                    <div class="post-info">
+                        <a href="#" class="post-title">关于社区规范与用户行为准则的说明</a>
+                        <div class="post-meta">
+                            <span>作者: Moderator</span>
+                            <span>2023-10-23</span>
+                            <span>💬 85</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item">
+                    <img src="https://picsum.photos/seed/rel3/160/120" alt="Post Image" class="post-thumb">
+                    <div class="post-info">
+                        <a href="#" class="post-title">分享你的生活点滴与心情故事</a>
+                        <div class="post-meta">
+                            <span>作者: User882</span>
+                            <span>2023-10-22</span>
+                            <span>💬 42</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-item">
+                    <img src="https://picsum.photos/seed/rel4/160/120" alt="Post Image" class="post-thumb">
+                    <div class="post-info">
+                        <a href="#" class="post-title">热门话题讨论：如何建立健康的边界感</a>
+                        <div class="post-meta">
+                            <span>作者: User103</span>
+                            <span>2023-10-21</span>
+                            <span>💬 210</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <div class="section-title" style="font-size: 16px; margin-bottom: 12px; padding-left: 0; border-left: none;">
+                    <span>24小时热榜</span>
+                </div>
+                <ul class="hot-list">
+                    <li>
+                        <span class="hot-num">1</span>
+                        <a href="#" class="hot-title">新手注册指南与账号安全提示</a>
+                    </li>
+                    <li>
+                        <span class="hot-num">2</span>
+                        <a href="#" class="hot-title">如何高效参与社区互动</a>
+                    </li>
+                    <li>
+                        <span class="hot-num">3</span>
+                        <a href="#" class="hot-title">精选话题推荐：深夜情感</a>
+                    </li>
+                    <li>
+                        <span class="hot-num">4</span>
+                        <a href="#" class="hot-title">社区版主招募公告</a>
+                    </li>
+                    <li>
+                        <span class="hot-num">5</span>
+                        <a href="#" class="hot-title">常见问题解答汇总</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <div class="section-title" style="font-size: 16px; margin-bottom: 12px; padding-left: 0; border-left: none;">
+                    <span>友情链接</span>
+                </div>
+                <div style="font-size: 13px; color: var(--text-secondary); line-height: 2;">
+                    <a href="#" style="display:block;">相关社区A</a>
+                    <a href="#" style="display:block;">兴趣联盟B</a>
+                    <a href="#" style="display:block;">资讯中心C</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <section class="card" style="padding: 24px; margin-bottom: 40px;">
+        <div class="section-title">
+            <span>社区公告</span>
+        </div>
+        <div style="background-color: rgba(187, 134, 252, 0.1); border: 1px solid rgba(187, 134, 252, 0.2); border-radius: 4px; padding: 16px;">
+            <p style="margin-bottom: 8px;"><strong>📢 爽妇网se 迎新活动：</strong></p>
+            <p style="color: var(--text-secondary); font-size: 14px;">欢迎新成员加入。我们致力于提供一个安全、尊重且充满活力的交流环境。请各位用户遵守社区规则，文明发言。如有任何疑问，请随时联系客服。</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">服务条款</a>
+            <a href="#">隐私政策</a>
+            <a href="#">联系方式</a>
+            <a href="#">帮助中心</a>
+        </div>
+        <p class="copyright">
+            Copyright © 2023 爽妇网se. All Rights Reserved.<br>
+            本站内容仅供成年用户交流使用，请遵守当地法律法规。
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
