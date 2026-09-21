@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="苹果Mini价格查询与购买指南。提供最新一代及往代苹果Mini系列（如iPhone SE、Mac mini、iPad mini）的详细价格对比、配置分析、优缺点评测及购买建议。">
+    <meta name="keywords" content="苹果mini价格, iPhone SE价格, Mac mini价格, iPad mini价格, 苹果迷你设备报价">
+    <title>苹果mini价格-最新配置报价与购买指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0071e3;
+            --secondary-color: #f5f5f7;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --bg-body: #ffffff;
+            --bg-card: #ffffff;
+            --border-color: #d2d2d7;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius-md: 12px;
+            --radius-sm: 8px;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+            --shadow-md: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: saturate(180%) blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            height: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-weight: 400;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--text-main);
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+
+        .tab-btn {
+            padding: 8px 24px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            color: var(--text-secondary);
+        }
+
+        .tab-btn.active {
+            background: var(--text-main);
+            color: white;
+            border-color: var(--text-main);
+        }
+
+        /* Price Section */
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            background: var(--bg-card);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 0.75rem;
+            background: #e8f0fe;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .product-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-icon svg {
+            width: 100%;
+            height: 100%;
+            fill: var(--text-main);
+        }
+
+        .product-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .product-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        .price-current {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .price-unit {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .price-old {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            text-decoration: line-through;
+        }
+
+        .specs-list {
+            margin-bottom: 24px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+        }
+
+        .specs-list li {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .specs-list li strong {
+            color: var(--text-main);
+        }
+
+        .btn-primary {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--radius-sm);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: #0077ed;
+        }
+
+        /* Comparison Table */
+        .comparison-section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 16px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .comparison-table th {
+            background-color: var(--secondary-color);
+            font-weight: 600;
+            color: var(--text-main);
+            width: 25%;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #fafafa;
+        }
+
+        .feature-name {
+            text-align: left;
+            font-weight: 500;
+        }
+
+        /* Guide Section */
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .guide-card {
+            padding: 24px;
+        }
+
+        .guide-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .guide-card h3 svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--primary-color);
+        }
+
+        .guide-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .guide-card ul {
+            margin-top: 12px;
+        }
+
+        .guide-card li {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .guide-card li::before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: "-";
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(0,0,0,0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-wrapper nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.21-1.96 1.07-3.11-1.05.05-2.31.7-3.04 1.58-.67.78-1.25 2.04-1.09 3.11 1.18.09 2.35-.71 3.06-1.58"/>
+                </svg>
+                AppleMiniGuide
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#iphone-se">iPhone SE</a></li>
+                    <li><a href="#mac-mini">Mac mini</a></li>
+                    <li><a href="#ipad-mini">iPad mini</a></li>
+                    <li><a href="#guide">选购指南</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#contact" style="color:var(--primary-color);">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>苹果Mini系列价格查询</h1>
+                <p>为您提供最新iPhone SE、Mac mini及iPad mini的实时报价、配置解析与购买建议。</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('all')">全部</button>
+                <button class="tab-btn" onclick="switchTab('iphone-se')">iPhone SE</button>
+                <button class="tab-btn" onclick="switchTab('mac-mini')">Mac mini</button>
+                <button class="tab-btn" onclick="switchTab('ipad-mini')">iPad mini</button>
+            </div>
+
+            <div class="price-grid" id="priceContainer">
+                <!-- iPhone SE Content -->
+                <article class="product-card" data-category="iphone-se">
+                    <span class="product-tag">热门推荐</span>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z"/>
+                        </svg>
+                    </div>
+                    <h2 class="product-title">iPhone SE (第三代)</h2>
+                    <p class="product-subtitle">A15仿生芯片 | 拍照更清晰</p>
+                    <div class="price-row">
+                        <span class="price-current">¥3,599</span>
+                        <span class="price-unit">起</span>
+                    </div>
+                    <div class="price-old">¥4,099</div>
+                    <ul class="specs-list">
+                        <li><strong>存储</strong> 64GB / 128GB / 256GB</li>
+                        <li><strong>芯片</strong> A15 仿生芯片</li>
+                        <li><strong>电池</strong> 约15小时视频播放</li>
+                    </ul>
+                    <a href="#" class="btn-primary">查看详情</a>
+                </article>
+
+                <!-- Mac mini Content -->
+                <article class="product-card" data-category="mac-mini">
+                    <span class="product-tag">新品上市</span>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z"/>
+                        </svg>
+                    </div>
+                    <h2 class="product-title">Mac mini (M2芯片版)</h2>
+                    <p class="product-subtitle">M2 Pro / M2 芯片 | 高性能迷你主机</p>
+                    <div class="price-row">
+                        <span class="price-current">¥6,499</span>
+                        <span class="price-unit">起</span>
+                    </div>
+                    <ul class="specs-list">
+                        <li><strong>内存</strong> 8GB / 16GB / 32GB</li>
+                        <li><strong>硬盘</strong> 256GB / 512GB / 1TB</li>
+                        <li><strong>接口</strong> 4个雷电4</li>
+                    </ul>
+                    <a href="#" class="btn-primary">查看详情</a>
+                </article>
+
+                <!-- iPad mini Content -->
+                <article class="product-card" data-category="ipad-mini">
+                    <span class="product-tag">轻薄便携</span>
+                    <div class="product-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 2H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h7v2H8v2h8v-2h-2v-2h7c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H3V4h18v12z"/>
+                        </svg>
+                    </div>
+                    <h2 class="product-title">iPad mini (第6代)</h2>
+                    <p class="product-subtitle">全面屏设计 | A15 仿生芯片</p>
+                    <div class="price-row">
+                        <span class="price-current">¥3,099</span>
+                        <span class="price-unit">起</span>
+                    </div>
+                    <ul class="specs-list">
+                        <li><strong>屏幕</strong> 8.3英寸 Liquid视网膜屏</li>
+                        <li><strong>芯片</strong> A15 仿生芯片</li>
+                        <li><strong>重量</strong> 约293克</li>
+                    </ul>
+                    <a href="#" class="btn-primary">查看详情</a>
+                </article>
+            </div>
+
+            <!-- Comparison Table -->
+            <section class="comparison-section" id="guide">
+                <div class="section-header">
+                    <h2>配置与价格对比</h2>
+                    <p>不同型号的苹果Mini设备参数一览</p>
+                </div>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>产品型号</th>
+                            <th>屏幕尺寸</th>
+                            <th>核心芯片</th>
+                            <th>起售价</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">iPhone SE</td>
+                            <td>4.7 英寸 LCD</td>
+                            <td>A15 (6核)</td>
+                            <td>¥3,599</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">Mac mini</td>
+                            <td>无 (外接显示器)</td>
+                            <td>M2 / M2 Pro</td>
+                            <td>¥6,499</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">iPad mini</td>
+                            <td>8.3 英寸 Liquid</td>
+                            <td>A15 (6核)</td>
+                            <td>¥3,099</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Buying Guide -->
+            <section class="guide-grid">
+                <div class="guide-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        如何选择？
+                    </h3>
+                    <p>如果您追求极致性价比和经典设计，<strong>iPhone SE</strong>是首选；如果您需要桌面级性能且空间有限，<strong>Mac mini</strong>性能强劲；如果您希望拥有大屏体验的便携性，<strong>iPad mini</strong>则是完美的移动工作站。</p>
+                    <ul>
+                        <li>需要通话功能？选择 iPhone SE</li>
+                        <li>需要多任务处理或专业创作？选择 Mac mini</li>
+                        <li>阅读、游戏、轻办公？选择 iPad mini</li>
+                    </ul>
+                </div>
+                <div class="guide-card">
+                    <h3>
+                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                        购买建议
+                    </h3>
+                    <p>价格会随促销活动波动，建议关注“618”、“双11”或教育优惠活动。购买前请确认保修政策及是否支持以旧换新。</p>
+                    <ul>
+                        <li>关注官方渠道：Apple Store 官网</li>
+                        <li>留意教育优惠：学生/教职工可享折扣</li>
+                        <li>以旧换新：旧设备可抵扣部分价格</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2>常见问题</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">iPhone SE 和 iPad mini 的区别是什么？</div>
+                    <div class="faq-answer">iPhone SE 是手机，拥有通话功能，尺寸较小；iPad mini 是平板电脑，主要用于触控操作，无法直接拨打电话，但屏幕更大，适合阅读和娱乐。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Mac mini 适合新手使用吗？</div>
+                    <div class="faq-answer">Mac mini 体积小巧，无需外接显示器和键盘鼠标，非常适合桌面空间有限或需要极简办公环境的用户。但新手需注意自行连接显示器。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">哪里可以查到最准确的苹果mini价格？</div>
+                    <div class="faq-answer">建议直接访问苹果中国官网的“选购”页面，或授权经销商的实时报价系统，以确保获取最新且准确的售价信息。</div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>产品系列</h4>
+                    <ul>
+                        <li><a href="#">iPhone SE</a></li>
+                        <li><a href="#">Mac mini</a></li>
+                        <li><a href="#">iPad mini</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">购买指南</a></li>
+                        <li><a href="#">保修政策</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">隐私声明</a></li>
+                        <li><a href="#">使用条款</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AppleMiniGuide. All rights reserved. 本站价格仅供参考，具体请以官方渠道为准。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Tab Switching Logic
+        function switchTab(category) {
+            const cards = document.querySelectorAll('.product-card');
+            const buttons = document.querySelectorAll('.tab-btn');
+            
+            // Update button states
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Filter cards
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.5s';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                // Close all others
+                faqItems.forEach(i => i.classList.remove('active'));
+                // Toggle current
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Add simple fade animation style
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+  </html>
