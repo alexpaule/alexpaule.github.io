@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深夜食堂豆瓣 - 深夜食堂电影与电视剧豆瓣评分、影评分析、经典语录及观后感分享平台。">
+    <meta name="keywords" content="深夜食堂, 豆瓣, 评分, 影评, 日剧, 日影, 江口洋介">
+    <title>深夜食堂豆瓣-评分影评与经典语录分享</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d9534f;
+            --secondary-color: #f0f0f0;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .rating-badge {
+            display: inline-block;
+            background-color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .card-meta {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .score {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            background-color: #c9302c;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Main Content Area */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .header-container {
+                padding: 0 15px;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Section Styles */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            font-weight: normal;
+        }
+
+        /* Review List */
+        .review-item {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .review-author {
+            font-weight: bold;
+            color: var(--text-dark);
+        }
+
+        .review-score {
+            color: #ff9800;
+        }
+
+        .review-text {
+            font-size: 1rem;
+            color: #444;
+        }
+
+        /* Quotes Section */
+        .quote-box {
+            background-color: #fff8f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+        }
+
+        .quote-author {
+            text-align: right;
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            font-style: normal;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        /* Tags */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tag {
+            background-color: #eee;
+            color: #555;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg>
+            <span>深夜食堂豆瓣</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">评分榜单</a></li>
+                <li><a href="#">影评专区</a></li>
+                <li><a href="#">经典语录</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="rating-badge">豆瓣评分 9.4</div>
+    <h1>深夜食堂：治愈系美食与故事的交汇</h1>
+    <p>这里是关于日剧《深夜食堂》的深度解析与粉丝社区。在这里，你可以找到原声带推荐、角色分析以及那些温暖人心的经典语录。</p>
+</section>
+
+<div class="container">
+    <div class="main-layout">
+        <!-- Left Column: Content -->
+        <main>
+            <!-- Featured Content -->
+            <section>
+                <div class="section-title">
+                    <h2>剧集介绍与背景</h2>
+                    <a href="#">查看详情 &rarr;</a>
+                </div>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/food1/800/400" alt="深夜食堂场景" class="card-image">
+                    <div class="card-body">
+                        <h3 class="card-title">从东京小巷到全球观众：深夜食堂的治愈力量</h3>
+                        <div class="card-meta">
+                            <span>2023-10-24</span>
+                            <span>阅读量 1.2w</span>
+                        </div>
+                        <p class="card-desc">
+                            《深夜食堂》改编自安倍夜郎的同名漫画，讲述了在东京一条不起眼的小巷里，有一家只在深夜营业的食堂。老板（小林薰饰）不仅烹饪简单的家常菜，更倾听客人们的故事。这部剧以其独特的叙事节奏和细腻的情感描写，在全球范围内收获了极高的口碑。豆瓣评分常年维持在9.0以上，是无数观众心中的治愈神作。
+                        </p>
+                        <div class="tags">
+                            <span class="tag">治愈系</span>
+                            <span class="tag">美食</span>
+                            <span class="tag">日剧</span>
+                            <span class="tag">情感</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Reviews List -->
+            <section style="margin-top: 40px;">
+                <div class="section-title">
+                    <h2>精选影评</h2>
+                    <a href="#">查看全部 &rarr;</a>
+                </div>
+                
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">吃货小张</span>
+                        <span class="review-score">8.5分</span>
+                    </div>
+                    <p class="review-text">虽然是美食番，但最打动人的是人与人之间的温情。老板做的每一道菜都有故事，让人想起自己生活中的某个瞬间。</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">日剧迷</span>
+                        <span class="review-score">9.2分</span>
+                    </div>
+                    <p class="review-text">小林薰老师的演技简直神了，不需要太多的台词，一个眼神就能表达出所有的情绪。配乐也非常到位，让人回味无穷。</p>
+                </div>
+
+                <div class="review-item">
+                    <div class="review-header">
+                        <span class="review-author">深夜的酒</span>
+                        <span class="review-score">8.8分</span>
+                    </div>
+                    <p class="review-text">虽然剧集节奏较慢，但这正是它的魅力所在。在快节奏的生活中，深夜食堂提供了一个可以让灵魂停靠的地方。</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Right Column: Sidebar -->
+        <aside>
+            <!-- Quotes -->
+            <div style="margin-bottom: 30px;">
+                <div class="section-title">
+                    <h2>经典语录</h2>
+                </div>
+                <div class="quote-box">
+                    "没有什么是一顿美食解决不了的，如果有，那就两顿。"
+                    <span class="quote-author">—— 老板</span>
+                </div>
+                <div class="quote-box">
+                    "食物，是人与人的连接，也是治愈心灵的良药。"
+                    <span class="quote-author">—— 观众感悟</span>
+                </div>
+                <div class="quote-box">
+                    "在这个世界上，总有一盏灯为你而亮，总有一碗面为你而煮。"
+                    <span class="quote-author">—— 粉丝语录</span>
+                </div>
+            </div>
+
+            <!-- Top Characters -->
+            <div style="margin-bottom: 30px;">
+                <div class="section-title">
+                    <h2>人气角色</h2>
+                </div>
+                <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 0;">
+                    <div class="card" style="box-shadow: none; padding: 10px;">
+                        <img src="https://picsum.photos/seed/face1/150/150" alt="老板" style="border-radius: 50%; width: 100%; height: 100px; object-fit: cover;">
+                        <h4 style="margin-top: 10px; font-size: 1rem;">老板</h4>
+                    </div>
+                    <div class="card" style="box-shadow: none; padding: 10px;">
+                        <img src="https://picsum.photos/seed/face2/150/150" alt="酒保" style="border-radius: 50%; width: 100%; height: 100px; object-fit: cover;">
+                        <h4 style="margin-top: 10px; font-size: 1rem;">酒保</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Tags -->
+            <div>
+                <div class="section-title">
+                    <h2>热门标签</h2>
+                </div>
+                <div class="tags">
+                    <a href="#" class="tag">治愈</a>
+                    <a href="#" class="tag">日剧</a>
+                    <a href="#" class="tag">深夜食堂</a>
+                    <a href="#" class="tag">小林薰</a>
+                    <a href="#" class="tag">美食</a>
+                    <a href="#" class="tag">怀旧</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-links">
+            <a href="#">关于我们</a>
+            <a href="#">联系合作</a>
+            <a href="#">免责声明</a>
+            <a href="#">用户协议</a>
+        </div>
+        <p class="copyright">Copyright © 2023 深夜食堂豆瓣分享站. All rights reserved.</p>
+        <p class="copyright" style="margin-top: 10px; font-size: 0.75rem;">本站内容仅供学习交流使用，不代表本站立场。</p>
+    </div>
+</footer>
+
+</body>
+</html>
