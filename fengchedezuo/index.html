@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="风车的做法详细图解教程，包含手工折纸风车、废旧纸箱风车、户外大风车等多种制作方法，提供材料清单、步骤说明及安全注意事项，适合亲子手工、幼儿园教学及DIY爱好者参考。">
+    <meta name="keywords" content="风车的做法,手工风车制作,折纸风车,纸箱风车,亲子手工">
+    <title>风车的做法-亲子手工制作教程与DIY指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4CAF50;
+            --primary-dark: #388E3C;
+            --accent-color: #FFC107;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #f9f9f9;
+            --bg-card: #ffffff;
+            --spacing-unit: 16px;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --shadow-hover: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e9 0%, #ffffff 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            color: var(--primary-dark);
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(76, 175, 80, 0.1);
+            color: var(--primary-dark);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* 主要内容区 */
+        main {
+            padding: 40px 0;
+        }
+
+        /* 分类导航 */
+        .category-nav {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .category-btn {
+            background-color: var(--bg-card);
+            border: 1px solid #eee;
+            padding: 10px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .category-btn:hover, .category-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        /* 制作教程卡片 */
+        .tutorial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-color: #e0e0e0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: rgba(0,0,0,0.6);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        .card-content {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 16px;
+        }
+
+        .difficulty {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .difficulty span {
+            color: var(--accent-color);
+        }
+
+        /* 详细步骤区域 */
+        .steps-section {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        .step-list {
+            counter-reset: step-counter;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 40px;
+            align-items: flex-start;
+        }
+
+        .step-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.125rem;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .step-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .step-content p {
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .step-content ul {
+            padding-left: 20px;
+        }
+
+        .step-content li {
+            color: var(--text-light);
+            margin-bottom: 6px;
+            list-style-type: disc;
+        }
+
+        /* 材料准备 */
+        .materials-section {
+            background-color: #fff8e1;
+            border-radius: var(--border-radius);
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .materials-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #f57f17;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .materials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 16px;
+        }
+
+        .material-item {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ 区域 */
+        .faq-section {
+            margin-bottom: 60px;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            margin-bottom: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            background-color: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            padding: 0 20px;
+            background-color: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #ccc;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-content p {
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            margin: 0 12px;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 16px 0;
+                gap: 16px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .steps-section {
+                padding: 24px;
+            }
+
+            .step-item {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .step-number {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M2 12h20"/>
+                    <path d="M4.93 4.93l14.14 14.14"/>
+                    <path d="M19.07 4.93L4.93 19.07"/>
+                </svg>
+                <span>DIY手工坊</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">全部教程</a></li>
+                    <li><a href="#">折纸专区</a></li>
+                    <li><a href="#">废旧利用</a></li>
+                    <li><a href="#">幼儿园教案</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>风车的做法</h1>
+            <p>探索风车的奥秘，从简单的折纸到复杂的户外装置。这里有最实用的手工制作教程，适合亲子互动、课堂教学及创意DIY。</p>
+            <div class="hero-tags">
+                <span class="tag">折纸风车</span>
+                <span class="tag">纸箱风车</span>
+                <span class="tag">风力发电原理</span>
+                <span class="tag">幼儿园手工</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- 分类筛选 -->
+        <div class="category-nav">
+            <button class="category-btn active" onclick="filterCategory('all')">全部推荐</button>
+            <button class="category-btn" onclick="filterCategory('paper')">折纸风车</button>
+            <button class="category-btn" onclick="filterCategory('cardboard')">纸箱风车</button>
+            <button class="category-btn" onclick="filterCategory('outdoor')">户外大风车</button>
+        </div>
+
+        <!-- 教程列表 -->
+        <div class="tutorial-grid" id="tutorialGrid">
+            
+            <!-- 卡片 1: 经典折纸风车 -->
+            <article class="card" data-category="paper">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/windmill1/400/300" alt="经典折纸风车制作">
+                    <span class="card-badge">热门</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">经典折纸风车做法</h3>
+                    <p class="card-desc">这是最基础、最经典的风车做法。只需一张正方形彩纸，通过折叠和简单的穿线技巧，就能制作出随风转动的可爱风车。</p>
+                    <div class="card-meta">
+                        <div class="difficulty">难度: <span>★☆☆☆☆</span></div>
+                        <div>耗时: 约10分钟</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 2: 纸箱风力风车 -->
+            <article class="card" data-category="cardboard">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/windmill2/400/300" alt="纸箱风力风车制作">
+                    <span class="card-badge">环保</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">纸箱风力风车</h3>
+                    <p class="card-desc">利用废旧纸箱制作的大型风车，适合户外使用。通过切割和组合硬纸板，制作出风力强劲且造型独特的大型装置。</p>
+                    <div class="card-meta">
+                        <div class="difficulty">难度: <span>★★★☆☆</span></div>
+                        <div>耗时: 约40分钟</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 3: 亲子手工风车 -->
+            <article class="card" data-category="paper">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/windmill3/400/300" alt="亲子手工风车制作">
+                    <span class="card-badge">亲子</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">亲子手工风车</h3>
+                    <p class="card-desc">专为幼儿园亲子活动设计的简单风车。使用安全无毒的彩纸和竹签，让孩子在动手过程中感受风的魔力。</p>
+                    <div class="card-meta">
+                        <div class="difficulty">难度: <span>★☆☆☆☆</span></div>
+                        <div>耗时: 约15分钟</div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- 卡片 4: 户外大型风车 -->
+            <article class="card" data-category="outdoor">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/windmill4/400/300" alt="户外大型风车制作">
+                    <span class="card-badge">创意</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">户外大型风车</h3>
+                    <p class="card-desc">结合绘画与手工的大型装饰风车，适合挂在阳台或庭院。色彩鲜艳，造型多变，是夏季庭院装饰的绝佳选择。</p>
+                    <div class="card-meta">
+                        <div class="difficulty">难度: <span>★★☆☆☆</span></div>
+                        <div>耗时: 约60分钟</div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- 详细步骤区域 -->
+        <section class="steps-section">
+            <div class="section-header">
+                <h2>经典折纸风车详细步骤</h2>
+                <p>适合初学者的标准折纸风车制作指南</p>
+            </div>
+
+            <div class="materials-section">
+                <h3 class="materials-title">🛠️ 所需材料</h3>
+                <div class="materials-grid">
+                    <div class="material-item">正方形彩纸 (15cmx15cm)</div>
+                    <div class="material-item">竹签或冰棍棒</div>
+                    <div class="material-item">大头针</div>
+                    <div class="material-item">剪刀</div>
+                    <div class="material-item">胶带或胶水</div>
+                </div>
+            </div>
+
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>准备纸张</h3>
+                        <p>选择一张颜色鲜艳的正方形彩纸。如果纸张背面颜色不同，建议先在背面画上图案。</p>
+                        <p>将纸张对角折叠，形成一个三角形，然后再次对折，折出纸张的折痕。</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>制作扇叶</h3>
+                        <p>将三角形的一角折向中心点，形成一个小三角形。重复此步骤，将四个角都向中心折叠。</p>
+                        <p>打开折叠后的部分，你会看到纸张上出现了一个十字形的折痕。小心地将四个角向内压平，形成四个小扇叶。</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>连接风车头</h3>
+                        <p>用剪刀在扇叶中心剪一个小口（注意不要剪断底部的连接处）。将竹签穿过小口，用胶水固定在背面。</p>
+                        <p>将大头针从风车头正面穿过，穿过竹签后从背面露出。大头针尖端稍微露出一点点即可。</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>完成与调试</h3>
+                        <p>将另一根竹签或冰棍棒穿过大头针的尖端，用胶带固定，作为风车的手柄。</p>
+                        <p>轻轻转动风车，确保扇叶转动灵活。如果转动受阻，调整大头针的露出长度或检查折痕是否平整。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 -->
+        <section class="faq-section">
+            <div class="section-header">
+                <h2>常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">为什么我的风车转得不快或者不转？</div>
+                <div class="faq-answer">
+                    <p>风车不转通常由以下几个原因造成：1. <strong>轴心过紧</strong>：大头针插入太深或纸张折叠过厚，导致摩擦力过大。建议将大头针尖端稍微剪短一点。2. <strong>扇叶不平衡</strong>：检查四个扇叶的折痕是否一致，确保风车头是正圆形的。3. <strong>风力不足</strong>：在室内无风环境下，风车无法转动，建议移至阳台或户外。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">除了竹签，可以用什么材料做轴心？</div>
+                <div class="faq-answer">
+                    <p>除了竹签，你可以使用吸管、冰棍棒、甚至是一根细铁丝。对于幼儿手工，使用带有塑料盖的吸管非常安全且易于操作。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">如何让纸箱风车更坚固？</div>
+                <div class="faq-answer">
+                    <p>制作纸箱风车时，建议在纸板背面贴上一层硬纸板或硬卡纸来加固。连接杆件时，可以使用热熔胶枪代替普通胶水，能提供更强的粘合力。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2023 DIY手工坊 - 专注分享创意手工制作教程</p>
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">版权声明</a>
+                <a href="#">联系我们</a>
+                <a href="#">免责声明</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 分类筛选功能
+        function filterCategory(category) {
+            // 更新按钮状态
+            const buttons = document.querySelectorAll('.category-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // 筛选卡片
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                    // 添加简单的淡入动画
+                    card.style.opacity = '0';
+                    setTimeout(() => card.style.opacity = '1', 50);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // FAQ 折叠功能
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // 关闭其他已打开的项
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // 切换当前项
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
